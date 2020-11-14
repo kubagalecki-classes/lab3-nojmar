@@ -14,8 +14,9 @@ unsigned int transportujFlota(unsigned int towar)
     unsigned int iloscTowaru = s1->transportuj();
     licznik = licznik + iloscTowaru;
     
-    if (Zaglowiec* z = dynamic_cast<Zaglowiec*>(*s1)) {
-     liczbaZaglowcow = liczbaZaglowcow + 1;
+       if (typeid(Zaglowiec) == typeid(*s1)){    
+      liczbaZaglowcow = liczbaZaglowcow + 1;
+   
     }
 
     delete s1;
